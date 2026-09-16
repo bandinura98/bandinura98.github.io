@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Batuhan Senoglu — Software Engineer</title>
+<meta name="description" content="Software engineer. Full-screen HMI applications for heavy industrial machinery, and real-time systems for the foreign exchange market. C# / .NET.">
+<meta name="theme-color" content="#06060a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Batuhan Senoglu — Software Engineer">
+<meta property="og:description" content="Industrial HMI software and real-time financial systems, built in C#.">
+<meta property="og:image" content="assets/img/og-cover.svg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Archivo+Black&family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- ══════════ ATMOSPHERE ══════════ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="aura" id="aura" aria-hidden="true"></div>
+<canvas class="dust" id="dust" aria-hidden="true"></canvas>
+
+<div class="veil" id="veil" aria-hidden="true">
+  <svg class="veil__sigil" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="88" /><circle cx="100" cy="100" r="66" />
+    <polygon points="100,22 168,140 32,140" /><polygon points="100,178 32,60 168,60" />
+  </svg>
+  <span class="veil__txt" data-i18n="loading">LOADING</span>
+</div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a class="nav__mark" href="#top" aria-label="Home">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="20" r="17"/><polygon points="20,7 31,26 9,26"/><circle cx="20" cy="20" r="4"/>
+    </svg>
+    <span>B.S.</span>
+  </a>
+
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#profile"><i>I</i><span data-i18n="nav.profile">Profile</span></a>
+    <a href="#industrial"><i>II</i><span data-i18n="nav.industrial">Industrial</span></a>
+    <a href="#markets"><i>III</i><span data-i18n="nav.markets">Markets</span></a>
+    <a href="#stack"><i>IV</i><span data-i18n="nav.stack">Stack</span></a>
+    <a href="#work"><i>V</i><span data-i18n="nav.work">Work</span></a>
+    <a href="#contact"><i>VI</i><span data-i18n="nav.contact">Contact</span></a>
+  </nav>
+
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" class="on">EN</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" data-lang="tr">TR</button>
+  </div>
+
+  <a class="nav__cta" href="#contact" data-i18n="nav.cta">GET IN TOUCH</a>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<div class="scrollbar" aria-hidden="true"><div class="scrollbar__fill" id="scrollFill"></div></div>
+
+<main id="top">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero__sigil" aria-hidden="true">
+    <svg viewBox="0 0 600 600">
+      <g class="spin-slow">
+        <circle cx="300" cy="300" r="270"/><circle cx="300" cy="300" r="230"/>
+        <g class="ticks"></g>
+      </g>
+      <g class="spin-rev">
+        <polygon points="300,90 482,405 118,405"/><polygon points="300,510 118,195 482,195"/>
+        <circle cx="300" cy="300" r="140"/>
+      </g>
+      <g class="spin-slow2">
+        <rect x="185" y="185" width="230" height="230" transform="rotate(45 300 300)"/>
+        <circle cx="300" cy="300" r="82"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero__inner">
+    <p class="eyebrow reveal" data-i18n="hero.eyebrow">SOFTWARE ENGINEER · INDUSTRIAL AUTOMATION &amp; FINANCIAL SYSTEMS</p>
+
+    <h1 class="hero__name">
+      <span class="reveal" style="--d:.05s">BATUHAN</span>
+      <span class="reveal outline" style="--d:.12s">SENOGLU</span>
+    </h1>
+
+    <p class="hero__role reveal" style="--d:.2s">
+      <span class="tag">HMI SOFTWARE</span><span class="tag">C# / .NET</span><span class="tag" data-i18n="hero.tag3">INDUSTRIAL CONTROL</span><span class="tag" data-i18n="hero.tag4">REAL-TIME SYSTEMS</span>
+    </p>
+
+    <p class="hero__lede reveal" style="--d:.28s" data-i18n="hero.lede">
+      Four years building software where failure is expensive: full-screen HMI applications
+      for heavy industrial machinery, and real-time systems for the foreign exchange market.
+    </p>
+
+    <div class="hero__acts reveal" style="--d:.36s">
+      <a class="btn btn--gold" href="#industrial" data-i18n="hero.cta1">VIEW WORK</a>
+      <a class="btn btn--ghost" href="https://github.com/" target="_blank" rel="noopener">GITHUB ↗</a>
+    </div>
+
+    <dl class="hero__stats reveal" style="--d:.44s">
+      <div><dt data-i18n="hero.stat1">YEARS OF EXPERIENCE</dt><dd data-count="4">0</dd></div>
+      <div><dt data-i18n="hero.stat2">MACHINE MODELS</dt><dd data-count="17">0</dd></div>
+      <div><dt data-i18n="hero.stat3">HMI PROGRAMS</dt><dd data-count="5">0</dd></div>
+      <div><dt data-i18n="hero.stat4">INDUSTRIES</dt><dd data-count="2">0</dd></div>
+    </dl>
+  </div>
+
+  <figure class="hero__portrait reveal" style="--d:.5s">
+    <div class="frame frame--tall">
+      <img src="assets/img/photo-01.jpg" alt="Batuhan Senoglu" loading="eager" onerror="this.style.display='none'">
+      <span class="frame__corner tl"></span><span class="frame__corner tr"></span>
+      <span class="frame__corner bl"></span><span class="frame__corner br"></span>
+    </div>
+    <figcaption data-i18n="fig1">FIG. 01 · PORTRAIT</figcaption>
+  </figure>
+
+  <a class="hero__scroll" href="#profile" aria-label="Scroll"><span></span><em data-i18n="scroll">SCROLL</em></a>
+</section>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    <span>C# · .NET · WINFORMS · WPF · PLC · MODBUS · G-CODE · DXF · SQL · MICROSERVICES · REST · WEBSOCKET · DOCKER ·&nbsp;</span>
+    <span>C# · .NET · WINFORMS · WPF · PLC · MODBUS · G-CODE · DXF · SQL · MICROSERVICES · REST · WEBSOCKET · DOCKER ·&nbsp;</span>
+  </div>
+</div>
+
+<!-- ══════════ I. PROFILE ══════════ -->
+<section id="profile" class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">I</span>
+    <h2 data-i18n="profile.h">PROFILE</h2>
+    <p class="sec__sub" data-i18n="profile.sub">Background and engineering approach.</p>
+  </div>
+
+  <div class="codex">
+    <div class="codex__text reveal">
+      <p class="drop" data-i18n="profile.p0">I build software that runs where downtime is measured in money.</p>
+      <p data-i18n="profile.p1">
+        For the past two years I have developed HMI software at <b>Kaban Makina</b>, a heavy machinery
+        manufacturer. My responsibility is the full-screen operator interface: the C# application that turns a
+        job order into machine motion, and machine state into something a shift operator can read at a glance.
+        Incorrect information on that screen produces scrap; an unresponsive screen stops a production line.
+      </p>
+      <p data-i18n="profile.p2">
+        Before that I spent two years as a C# engineer at a <b>foreign exchange firm</b>, on systems that had to
+        remain correct for as long as the market was open: live price distribution, order entry and routing,
+        execution handling and transaction processing — built on a microservice architecture and exercised
+        continuously against a non-production mirror.
+      </p>
+      <p data-i18n="profile.p3">
+        The domains are different; the engineering discipline is not — <span class="hl">deterministic behaviour,
+        honest state, thorough logging, and systems that degrade predictably rather than surprisingly.</span>
+      </p>
+
+      <h3 class="mini" data-i18n="profile.principles">OPERATING PRINCIPLES</h3>
+      <ul class="creed">
+        <li><span>01</span><em data-i18n="profile.pr1">If the operator made a mistake, the interface allowed it.</em></li>
+        <li><span>02</span><em data-i18n="profile.pr2">A value on screen is a commitment: accurate, or not shown at all.</em></li>
+        <li><span>03</span><em data-i18n="profile.pr3">Log as though you will be debugging it at 3 a.m.</em></li>
+        <li><span>04</span><em data-i18n="profile.pr4">Deliver, then stay with the system while it runs in production.</em></li>
+      </ul>
+    </div>
+
+    <figure class="codex__photo reveal" style="--d:.1s">
+      <div class="frame">
+        <img src="assets/img/photo-02.jpg" alt="On site" loading="lazy" onerror="this.style.display='none'">
+        <span class="frame__corner tl"></span><span class="frame__corner tr"></span>
+        <span class="frame__corner bl"></span><span class="frame__corner br"></span>
+      </div>
+      <figcaption data-i18n="fig2">FIG. 02 · ON SITE</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ II. INDUSTRIAL ══════════ -->
+<section id="industrial" class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">II</span>
+    <h2 data-i18n="ind.h">INDUSTRIAL SYSTEMS</h2>
+    <p class="sec__sub" data-i18n="ind.sub">Full-screen HMI applications developed in C# for production machinery.</p>
+  </div>
+
+  <div class="cards">
+    <article class="card reveal">
+      <div class="card__rune">AC</div>
+      <h3>AC SERIES</h3>
+      <p class="card__kind" data-i18n="ind.c1k">HMI application family</p>
+      <p data-i18n="ind.c1b">A dedicated full-screen program for each model in the series, designed for glove-operated
+        touch input: job entry, cut lists, angle and offset handling and live machine state on a single screen,
+        with no nested dialogs and no dependency on a mouse.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.cutopt">Cut optimisation</li><li data-i18n="bit.angle">Angle &amp; offset logic</li><li data-i18n="bit.transfer">CF &amp; serial transfer</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+
+    <article class="card reveal" style="--d:.06s">
+      <div class="card__rune">ZM</div>
+      <h3>ZM1060</h3>
+      <p class="card__kind" data-i18n="ind.ck">Operator interface</p>
+      <p data-i18n="ind.c2b">Recipe-driven job handling with live feedback from the controller. Designed so that a
+        change of shift does not require a retraining session.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.plc">PLC communication</li><li data-i18n="bit.queue">Job queue</li><li data-i18n="bit.diag">Diagnostics</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+
+    <article class="card reveal" style="--d:.12s">
+      <div class="card__rune">ZC</div>
+      <h3>ZC3054</h3>
+      <p class="card__kind" data-i18n="ind.ck">Operator interface</p>
+      <p data-i18n="ind.c3b">Cutting cell interface: part programs in, motion parameters out, with a validation
+        layer that prevents an out-of-range value from ever reaching an axis.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.valid">Validation layer</li><li data-i18n="bit.params">Parameter sets</li><li data-i18n="bit.fault">Fault reporting</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+
+    <article class="card reveal" style="--d:.18s">
+      <div class="card__rune">ZU</div>
+      <h3>ZU2020</h3>
+      <p class="card__kind" data-i18n="ind.ck">Operator interface</p>
+      <p data-i18n="ind.c4b">A compact station built on the same discipline: everything required for the current
+        operation visible at a glance, everything else deliberately out of the way.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.glance">Single-glance layout</li><li data-i18n="bit.defaults">Safe defaults</li><li data-i18n="bit.audit">Audit trail</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+
+    <article class="card reveal" style="--d:.24s">
+      <div class="card__rune">MD</div>
+      <h3>MD3030</h3>
+      <p class="card__kind" data-i18n="ind.ck">Operator interface</p>
+      <p data-i18n="ind.c5b">High-throughput operation, which puts the load on state management: the interface has
+        to remain an accurate representation of what the machine is doing while jobs arrive continuously.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.tp">Throughput handling</li><li data-i18n="bit.sm">State machine</li><li data-i18n="bit.recov">Recovery paths</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+
+    <article class="card card--wide reveal" style="--d:.3s">
+      <div class="card__rune">∑</div>
+      <h3 data-i18n="ind.c6h">SHARED PLATFORM</h3>
+      <p class="card__kind" data-i18n="ind.c6k">Common architecture across models</p>
+      <p data-i18n="ind.c6b">Behind the individual interfaces sits a shared C# platform: machine definitions, PLC
+        communication, DXF and geometry handling, cut and stopper optimisation, and the database layer that
+        records every job. Adding a machine model is a matter of describing it rather than rewriting the
+        application.</p>
+      <ul class="card__bits">
+        <li data-i18n="bit.models">17 machine models</li><li>DXF → part program</li><li data-i18n="bit.core">Shared core</li><li data-i18n="bit.modules">Per-machine modules</li>
+      </ul>
+      <span class="card__glow"></span>
+    </article>
+  </div>
+
+  <figure class="band reveal">
+    <div class="frame frame--wide">
+      <img src="assets/img/photo-03.jpg" alt="Production floor" loading="lazy" onerror="this.style.display='none'">
+      <span class="frame__corner tl"></span><span class="frame__corner tr"></span>
+      <span class="frame__corner bl"></span><span class="frame__corner br"></span>
+    </div>
+    <figcaption data-i18n="fig3">FIG. 03 · PRODUCTION FLOOR</figcaption>
+  </figure>
+</section>
+
+<!-- ══════════ III. MARKETS ══════════ -->
+<section id="markets" class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">III</span>
+    <h2 data-i18n="mkt.h">CAPITAL MARKETS</h2>
+    <p class="sec__sub" data-i18n="mkt.sub">Two years of C# on systems that had to stay correct while the market was open.</p>
+  </div>
+
+  <div class="market">
+    <figure class="market__photo reveal">
+      <div class="frame frame--tall">
+        <img src="assets/img/photo-04.jpg" alt="Workstation" loading="lazy" onerror="this.style.display='none'">
+        <span class="frame__corner tl"></span><span class="frame__corner tr"></span>
+        <span class="frame__corner bl"></span><span class="frame__corner br"></span>
+      </div>
+      <figcaption data-i18n="fig4">FIG. 04 · WORKSTATION</figcaption>
+    </figure>
+
+    <ol class="flow reveal" style="--d:.1s">
+      <li><b data-i18n="mkt.f1h">PRICE DISTRIBUTION</b><span data-i18n="mkt.f1b">Live quote ingestion and distribution. A stale tick is an incorrect tick, so freshness was treated as a correctness requirement rather than a performance one.</span></li>
+      <li><b data-i18n="mkt.f2h">ORDER ENTRY</b><span data-i18n="mkt.f2b">Buy and sell instructions accepted, validated and routed, with the constraint checks that keep an erroneous order from reaching the market.</span></li>
+      <li><b data-i18n="mkt.f3h">EXECUTION</b><span data-i18n="mkt.f3b">Fills, partial fills and rejections handled as expected outcomes with defined state transitions, not as exceptions.</span></li>
+      <li><b data-i18n="mkt.f4h">TRANSACTION PROCESSING</b><span data-i18n="mkt.f4b">Transactions carried through to a final, reconcilable state with a complete audit trail.</span></li>
+    </ol>
+
+    <div class="market__notes reveal" style="--d:.16s">
+      <div class="note">
+        <h4 data-i18n="mkt.n1h">PRODUCTION AND MIRROR</h4>
+        <p data-i18n="mkt.n1b">The production environment ran alongside a non-production mirror on the same build,
+          fed both live and replayed flow, so no release reached customers without first being exercised under
+          realistic conditions.</p>
+      </div>
+      <div class="note">
+        <h4 data-i18n="mkt.n2h">MICROSERVICE ARCHITECTURE</h4>
+        <p data-i18n="mkt.n2b">Pricing, order handling and processing were separated into independently deployable
+          services, each able to fail, restart and scale on its own — which contains the impact of any single
+          fault.</p>
+      </div>
+      <div class="note">
+        <h4 data-i18n="mkt.n3h">WHAT IT ESTABLISHED</h4>
+        <p data-i18n="mkt.n3b">Latency as a requirement rather than an optimisation, idempotency as a default, and
+          a working understanding of ordering and time in distributed systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IV. STACK ══════════ -->
+<section id="stack" class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">IV</span>
+    <h2 data-i18n="stack.h">TECHNICAL STACK</h2>
+    <p class="sec__sub" data-i18n="stack.sub">Applied in production on both sides of the work.</p>
+  </div>
+
+  <div class="arsenal">
+    <div class="arsenal__col reveal">
+      <h3><span class="rune">⚒</span><span data-i18n="stack.c1">LANGUAGES &amp; RUNTIME</span></h3>
+      <ul><li>C#</li><li>.NET / .NET Framework</li><li>WinForms</li><li>WPF</li><li data-i18n="stack.async">Async &amp; threading</li></ul>
+    </div>
+    <div class="arsenal__col reveal" style="--d:.06s">
+      <h3><span class="rune">⛓</span><span data-i18n="stack.c2">INDUSTRIAL</span></h3>
+      <ul><li data-i18n="stack.hmi">HMI design</li><li data-i18n="bit.plc">PLC communication</li><li data-i18n="stack.serial">Serial &amp; field protocols</li><li data-i18n="stack.gcode">G-code &amp; part programs</li><li data-i18n="stack.dxf">DXF geometry</li><li data-i18n="stack.opt">Cut &amp; stopper optimisation</li></ul>
+    </div>
+    <div class="arsenal__col reveal" style="--d:.12s">
+      <h3><span class="rune">✷</span><span data-i18n="stack.c3">DISTRIBUTED SYSTEMS</span></h3>
+      <ul><li data-i18n="stack.micro">Microservice architecture</li><li data-i18n="stack.rest">REST &amp; real-time feeds</li><li data-i18n="stack.queue">Queues &amp; messaging</li><li data-i18n="stack.ft">Fault tolerance</li><li data-i18n="stack.obs">Observability &amp; logging</li></ul>
+    </div>
+    <div class="arsenal__col reveal" style="--d:.18s">
+      <h3><span class="rune">☿</span><span data-i18n="stack.c4">DATA &amp; TOOLING</span></h3>
+      <ul><li data-i18n="stack.sql">SQL &amp; relational design</li><li data-i18n="stack.mig">Migrations &amp; schema design</li><li>Git</li><li data-i18n="stack.prof">Profiling &amp; debugging</li><li data-i18n="stack.field">On-site commissioning</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ V. WORK ══════════ -->
+<section id="work" class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">V</span>
+    <h2 data-i18n="work.h">SELECTED WORK</h2>
+    <p class="sec__sub" data-i18n="work.sub">Independent projects, outside the day job.</p>
+  </div>
+
+  <div class="works">
+    <a class="work work--lead reveal" href="#contact">
+      <span class="work__tag" data-i18n="work.t1">RELEASED</span>
+      <h3>FOLLOWUP</h3>
+      <p class="work__kind" data-i18n="work.k1">Task and progress tracking application · C#</p>
+      <p data-i18n="work.b1">An application for tracking work through to completion: what is open, what has moved,
+        what is blocked and who is holding it. Built because every team I have worked in kept the same
+        information in several places and relied on none of them.</p>
+      <ul class="card__bits"><li>C#</li><li data-i18n="work.persist">Persistence</li><li data-i18n="work.ui">Interface design</li></ul>
+      <span class="work__arrow">↗</span>
+    </a>
+
+    <div class="work work--soon reveal" style="--d:.08s">
+      <span class="work__tag work__tag--dim" data-i18n="work.t2">IN DEVELOPMENT</span>
+      <h3 data-i18n="work.h2">INDEPENDENT PROJECTS</h3>
+      <p class="work__kind" data-i18n="work.k2">Currently in progress</p>
+      <p data-i18n="work.b2">Work of my own, outside the factory and outside the firm. Details once there is
+        something worth reading.</p>
+      <span class="work__pulse"></span>
+    </div>
+
+    <div class="work work--note reveal" style="--d:.16s">
+      <span class="work__tag work__tag--dim" data-i18n="work.t3">OPEN</span>
+      <h3 data-i18n="work.h3">AVAILABLE FOR</h3>
+      <p class="work__kind" data-i18n="work.k3">Freelance and contract engagements</p>
+      <ul class="card__bits vert">
+        <li data-i18n="work.a1">Industrial HMI &amp; machine software</li>
+        <li data-i18n="work.a2">C# desktop applications</li>
+        <li data-i18n="work.a3">Backend &amp; service architecture</li>
+        <li data-i18n="work.a4">Modernising legacy systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VI. EXPERIENCE ══════════ -->
+<section class="sec">
+  <div class="sec__head reveal">
+    <span class="numeral">VI</span>
+    <h2 data-i18n="exp.h">EXPERIENCE</h2>
+  </div>
+
+  <ol class="chron">
+    <li class="reveal">
+      <span class="chron__dot"></span>
+      <span class="chron__when" data-i18n="exp.w1">2024 — PRESENT</span>
+      <h3 data-i18n="exp.h1">HMI &amp; Control Software Engineer · Kaban Makina</h3>
+      <p data-i18n="exp.b1">Full-screen operator applications in C# for the AC series, ZM1060, ZC3054, ZU2020 and
+        MD3030, together with the shared machine platform behind them. Heavy industry, production floors,
+        real consequences.</p>
+    </li>
+    <li class="reveal" style="--d:.08s">
+      <span class="chron__dot"></span>
+      <span class="chron__when" data-i18n="exp.w2">2022 — 2024</span>
+      <h3 data-i18n="exp.h2">Software Engineer · Foreign Exchange Firm</h3>
+      <p data-i18n="exp.b2">Two years of C# on live and non-live trading systems: price distribution, order
+        handling, execution and transaction processing, on a microservice architecture.</p>
+    </li>
+    <li class="reveal" style="--d:.16s">
+      <span class="chron__dot"></span>
+      <span class="chron__when" data-i18n="exp.w3">ONGOING</span>
+      <h3 data-i18n="exp.h3">Independent development</h3>
+      <p data-i18n="exp.b3">FollowUp, and the projects that come after it.</p>
+    </li>
+  </ol>
+
+  <figure class="band band--slim reveal">
+    <div class="frame frame--wide">
+      <img src="assets/img/photo-05.jpg" alt="Portrait" loading="lazy" onerror="this.style.display='none'">
+      <span class="frame__corner tl"></span><span class="frame__corner tr"></span>
+      <span class="frame__corner bl"></span><span class="frame__corner br"></span>
+    </div>
+    <figcaption data-i18n="fig5">FIG. 05 · AFTER SHIFT</figcaption>
+  </figure>
+</section>
+
+<!-- ══════════ VII. CONTACT ══════════ -->
+<section id="contact" class="sec sec--contact">
+  <div class="seal" aria-hidden="true">
+    <svg viewBox="0 0 400 400">
+      <g class="spin-rev"><circle cx="200" cy="200" r="180"/><circle cx="200" cy="200" r="150"/></g>
+      <g class="spin-slow"><polygon points="200,60 321,270 79,270"/><polygon points="200,340 79,130 321,130"/></g>
+      <circle cx="200" cy="200" r="60"/>
+    </svg>
+  </div>
+
+  <div class="contact reveal">
+    <span class="numeral">VII</span>
+    <h2 data-i18n="contact.h">CONTACT</h2>
+    <p class="contact__lede" data-i18n="contact.lede">
+      If you have machinery that needs an operator interface, a system that needs a dependable architecture,
+      or a codebase that has become difficult to change — that is the work I do.
+    </p>
+
+    <div class="contact__links">
+      <a class="clink" href="mailto:bsenoglu@kaban.com.tr">
+        <span class="clink__k" data-i18n="contact.mail">EMAIL</span><span class="clink__v">bsenoglu@kaban.com.tr</span>
+      </a>
+      <a class="clink" href="https://github.com/" target="_blank" rel="noopener">
+        <span class="clink__k">GITHUB</span><span class="clink__v">github.com/&lt;handle&gt;</span>
+      </a>
+      <a class="clink" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <span class="clink__k">LINKEDIN</span><span class="clink__v">in/&lt;handle&gt;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>© <span id="yr">2026</span> BATUHAN SENOGLU</span>
+    <span class="foot__mid" data-i18n="foot.mid">INDUSTRIAL AUTOMATION · FINANCIAL SYSTEMS</span>
+    <span data-i18n="foot.right">BUILT WITHOUT A FRAMEWORK</span>
+  </footer>
+</section>
+
+</main>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
